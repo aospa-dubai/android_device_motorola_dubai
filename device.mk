@@ -37,7 +37,6 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/etc/fstab.default:$(TARGET_COPY_OUT_VEN
 
 $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
-BOARD_HAVE_BLUETOOTH := false
 BOARD_HAVE_QCOM_FM := false
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
