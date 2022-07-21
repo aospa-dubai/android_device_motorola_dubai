@@ -151,8 +151,6 @@ PRODUCT_PACKAGES += \
     init.vendor.st21nfc.rc \
     ueventd.dubai.rc
 
-PRODUCT_ENABLE_QESDK := true
-
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
 
