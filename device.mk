@@ -93,6 +93,11 @@ PRODUCT_PACKAGES += \
     init.vendor.st21nfc.rc \
     ueventd.dubai.rc
 
+# Keymaster
+PRODUCT_PACKAGES += \
+   android.hardware.keymaster@4.1 \
+   android.hardware.keymaster@4.1.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
