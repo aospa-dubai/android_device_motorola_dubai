@@ -66,6 +66,11 @@ TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 # Charger
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
+
 # Init
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
