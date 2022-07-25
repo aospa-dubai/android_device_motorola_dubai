@@ -137,6 +137,10 @@ DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # Overlays
 PRODUCT_PACKAGES += \
     MotFrameworks \
