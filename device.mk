@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
+    init.dubai.perf.rc \
     init.mmi.boot.sh \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
