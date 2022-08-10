@@ -90,6 +90,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Fingerprint
+TARGET_USES_FOD_ZPOS := true
+
 # FM
 BOARD_HAVE_QCOM_FM := false
 
