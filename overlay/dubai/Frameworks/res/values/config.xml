@@ -300,7 +300,7 @@
     </array>
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
-    <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_tap</string>
+    <string name="config_dozeDoubleTapSensorType" translatable="false">co.aospa.sensor.double_tap</string>
 
     <!-- The OEM specified sensor type for the gesture to launch the camera app. -->
     <integer name="config_cameraLaunchGestureSensorType">65540</integer>
