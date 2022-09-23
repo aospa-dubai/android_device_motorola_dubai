@@ -40,6 +40,14 @@ PRODUCT_PACKAGES += \
 # AVB
 BOARD_AVB_ENABLE := true
 
+# Biometrics
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.dubai
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
@@ -81,13 +89,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Filesystem
 PRODUCT_PACKAGES += \
     fs_config_files
-
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3.so.vendor
 
 # FM
 BOARD_HAVE_QCOM_FM := false
