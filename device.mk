@@ -139,6 +139,10 @@ PRODUCT_PACKAGES += \
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/configs/mot_aids.fs
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.dubai
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
