@@ -100,6 +100,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.disable_backpressure=1
 debug.sf.disable_elapsetime_if_has_virtual=1
 persist.sys.sf.force_brightness_capability=1
 persist.sys.sf.native_mode=1
