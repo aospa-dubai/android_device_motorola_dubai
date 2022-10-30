@@ -27,6 +27,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+import /vendor/etc/init/hw/init.mmi.rc
 
 import /vendor/etc/init/hw/init.qti.kernel.rc
 
@@ -138,16 +139,10 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
     #Load WLAN driver
-    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan qca_cld3_qca6390
-    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan qca_cld3_qca6390
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan wlan
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan wlan
     #Allow access to memory hotplug device attributes
     chown system system /sys/kernel/mem-offline/anon_migrate
-
-on property:vendor.display.lcd_density=560
-   setprop dalvik.vm.heapgrowthlimit 256m
-
-on property:vendor.display.lcd_density=640
-   setprop dalvik.vm.heapgrowthlimit 512m
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
@@ -172,7 +167,7 @@ service vendor.lowi /vendor/bin/lowirpcd
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
-    group system
+    group system log diag
 
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
@@ -189,7 +184,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
 
 #service vendor.mdm_helper /vendor/bin/mdm_helper
 #    class core
-#    group system wakelock
+#    group log system wakelock diag vendor_rfs
 #    disabled
 
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
@@ -201,15 +196,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-on property:vold.decrypt=trigger_restart_framework
-   start vendor.cnss_diag
-
-service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   oneshot
 
 #fan-controller
 service fan_control_turn_on /vendor/bin/fan_control 1
