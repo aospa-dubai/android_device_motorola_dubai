@@ -64,7 +64,8 @@ BOARD_KERNEL_CMDLINE := \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_PAGESIZE    := 4096
+BOARD_KERNEL_PAGESIZE := 4096
+KERNEL_DEFCONFIG := vendor/dubai-qgki_defconfig
 
 # Partitions - A/B
 AB_OTA_PARTITIONS := boot dtbo odm product system system_ext vendor vendor_boot vbmeta vbmeta_system
