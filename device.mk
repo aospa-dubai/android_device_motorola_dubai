@@ -129,6 +129,10 @@ DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    MotFrameworks
+
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
