@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     MotFrameworks \
-    MotSystemUI
+    MotSystemUI \
+    MotWifiResTarget
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
