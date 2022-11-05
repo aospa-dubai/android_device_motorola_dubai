@@ -1,0 +1,36 @@
+# Audio
+audio.deep_buffer.media=true
+persist.vendor.audio.calfile0=/vendor/etc/acdbdata/adsp_avs_config.acdb
+persist.vendor.audio.calfile1=/vendor/etc/acdbdata/Bluetooth_cal.acdb
+persist.vendor.audio.calfile2=/vendor/etc/acdbdata/General_cal.acdb
+persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Global_cal.acdb
+persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Handset_cal.acdb
+persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Hdmi_cal.acdb
+persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Headset_cal.acdb
+persist.vendor.audio.calfile7=/vendor/etc/acdbdata/Speaker_cal.acdb
+persist.vendor.audio.dualmic.config=endfire
+persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.voicecomm=false
+persist.vendor.audio.speaker.stereo=true
+persist.vendor.audio.vbat.enabled=false
+persist.vendor.audio.voicecall.speaker.stereo=false
+persist.vendor.audio_fx.current=dolby
+ro.audio.monitorRotation=true
+ro.vendor.audio.sdk.fluence.nn.enabled=true
+ro.vendor.qti.va_odm.support=1
+vendor.audio.feature.audiozoom.enable=false
+vendor.audio.feature.concurrent_capture.enable=false
+vendor.audio.feature.deepbuffer_as_primary.enable=false
+vendor.audio.feature.dynamic_ecns.enable=false
+vendor.audio.screen_record=true
+vendor.audio.snd_card.open.retries=50
+vendor.audio.usb.disable.sidetone=true
+vendor.audio.use.sw.alac.decoder=false
+vendor.audio.use.sw.ape.decoder=false
+
+# Display
+debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
+persist.sys.sf.color_mode=0
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.enable_async_powermode=1

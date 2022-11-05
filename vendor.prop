@@ -1,16 +1,185 @@
-# Enable incremental fs
-ro.incremental.enable=yes
+# Audio steps
+ro.config.media_vol_steps=30
+ro.config.vc_call_vol_steps=8
+
+# Bluetooth
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
+persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
+persist.vendor.qcom.bluetooth.scram.enabled=false
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+persist.vendor.bt.aac_frm_ctl.enabled=true
+persist.vendor.media.recorder.bt709=true
+
+# Camera
+camera.disable_zsl_mode=1
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Dalvik
+dalvik.vm.dex2oat-threads=6
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=32m
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.5
+
+# Display
+vendor.display.comp_mask=0
+vendor.display.disable_excl_rect=0
+vendor.display.disable_excl_rect_partial_fb=1
+vendor.display.disable_offline_rotator=1
+vendor.display.disable_scaler=0
+vendor.display.enable_early_wakeup=1
+vendor.display.enable_hdr10_gpu_target=1
+vendor.display.enable_optimize_refresh=1
+vendor.display.hwc_disable_hdr=0
+vendor.display.use_smooth_motion=1
+
+# DPM
+persist.vendor.dpmhalservice.enable=1
+persist.vendor.eab.supported=1
+
+# DRM
+drm.service.enabled=true
+
+# Fingerprint
+persist.vendor.qfp=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Graphics
+debug.sf.disable_client_composition_cache=1
+debug.sf.disable_elapsetime_if_has_virtual=1
+debug.sf.enable_advanced_sf_phase_offset=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.high_fps_early_phase_offset_ns=-4000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.hw=0
+debug.sf.latch_unsignaled=1
+persist.demo.hdmirotationlock=false
+persist.sys.sf.color_saturation=1.0
+persist.sys.sf.force_brightness_capability=1
+persist.sys.sf.native_mode=1
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lahaina.api30
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+ro.opengles.version=196610
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+vendor.gralloc.disable_ubwc=0
+vendor.hw.sf.IdleLazyResetThresholdT=1000
+
+# IMS
+persist.vendor.ims.cam_sensor_delay=20
+persist.vendor.ims.display_delay=40
+persist.vendor.ims.playout_delay=50
+persist.vendor.ims.vt.enableadb=1
+
+# Enable incremental fs
+ro.incremental.enable=true
+
+# Media
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+# NFC
+ro.nfc.port=I2C
+
 # qteeconnector settings
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
 
+# Qualcomm System Daemon
+persist.vendor.qcomsysd.enabled=1
+
+# Radio
+persist.rcs.supported=1
+persist.vendor.data.iwlan.enable=true
+persist.vendor.radio.0x9e_not_callname=1
+persist.vendor.radio.add_power_save=1
+persist.vendor.radio.aosp_usr_pref_sel=true
+persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.dfr_mode_set=1
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.eri64_as_home=1
+persist.vendor.radio.fi_supported=0
+persist.vendor.radio.flexmap_type=none
+persist.vendor.radio.force_get_pref=1
+persist.vendor.radio.hidl_dev_service=1
+persist.vendor.radio.is_wps_enabled=true
+persist.vendor.radio.jbims=1
+persist.vendor.radio.lte_vrte_ltd=1
+persist.vendor.radio.msgtunnel.start=true
+persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.no_wait_for_card=1
+persist.vendor.radio.oem_ind_to_both=0
+persist.vendor.radio.qcril_uim_vcc_feature=1
+persist.vendor.radio.sar_sensor=1
+persist.vendor.radio.start_ota_daemon=0
+persist.vendor.radio.suppress_ussd_rel=1
+persist.vendor.radio.sw_mbn_update=0
+persist.vendor.rcs.presence.provision=0
+ro.vendor.radio.imei.sv=14
+
+# Sensors
+persist.vendor.sensors.allow_non_default_discovery=true
+persist.vendor.sensors.on_change_sample_period=true
+persist.vendor.sensors.sync_request=true
+ro.vendor.sensors.glance_approach=false
+
+# Shutdown
+sys.vendor.shutdown.waittime=500
+
 # SOC manufacturer
 ro.soc.manufacturer=QTI
+ro.soc.model=SM7325
 
 # SPU
 vendor.gatekeeper.disable_spu=true
+
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Stagefright
+debug.stagefright.c2inputsurface=-1
+
+# Surfaceflinger
+ro.sf.lcd_density=400
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_idle_timer_ms=250
+ro.surface_flinger.set_touch_timer_ms=1000
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.use_smart_90_for_video=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# USB
+sys.usb.mtp.batchcancel=1
+vendor.usb.diag.func.name=ffs
+vendor.usb.use_ffs_mtp=1
+
+# Wfd
+vendor.media.wfd.automode=1
+
+# WiFi
+wifi.aware.interface=wifi-aware0
