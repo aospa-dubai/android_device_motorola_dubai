@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Supported color mode options. -->
+    <string-array name="config_color_mode_options_strings">
+        <item>Natural</item> <!-- This uses colorimetric render intents-->
+        <item>Boosted</item> <!-- This applies a 10% boost using the PCC-->
+        <item>Saturated</item>
+        <item>Automatic</item> <!-- This uses enhanced render intents-->
+    </string-array>
+    <integer-array name="config_color_mode_options_values">
+        <item>0</item> <!-- COLOR_MODE_NATURAL -->
+        <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
+    </integer-array>
+
+</resources>
