@@ -35,6 +35,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Biometrics
 TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/dubai:libudfps_extension.dubai
+SOONG_CONFIG_qtidisplay_udfps := true
 
 # Boot
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
