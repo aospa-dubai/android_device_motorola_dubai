@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     MotFrameworks \
+    MotSettings \
     MotSystemUI \
     MotWifiResTarget
 
