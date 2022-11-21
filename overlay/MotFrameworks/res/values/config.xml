@@ -324,4 +324,7 @@
 
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
+
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">motorola/dubai_g/dubai:11/S1RD32.55-94/c9d3aa:user/release-keys</string>
 </resources>
