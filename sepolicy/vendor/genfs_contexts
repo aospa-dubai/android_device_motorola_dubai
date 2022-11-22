@@ -1,0 +1,55 @@
+# Health
+genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery      u:object_r:vendor_sysfs_battery_supply:s0
+
+# Motorola
+genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
+genfscon proc /config                                                           u:object_r:vendor_proc_hw:s0
+genfscon proc /hw                                                               u:object_r:vendor_proc_hw:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/soc/a94000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_pressed u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/soc/a94000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_enabled u:object_r:vendor_sysfs_sensors:s0
+
+# Touchscreen
+genfscon sysfs /class/touchscreen                                               u:object_r:vendor_sysfs_touchpanel:s0
+genfscon sysfs /devices/virtual/touchscreen                                     u:object_r:vendor_sysfs_touchpanel:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/soc/17a10040.qcom,wcn6750/wakeup                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/99c000.qcom,qup_uart/wakeup                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/3700000.qcom,lpass/subsys3/wakeup                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/3700000.qcom,lpass/wakeup                                                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys5/wakeup                                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-2/2-0008/wakeup                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a94000.spi/spi_master/spi0/spi0.0/wakeup                                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a300000.qcom,turing/subsys6/wakeup                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a300000.qcom,turing/wakeup                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys7/wakeup                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/wakeup               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-08/c440000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:et528/wakeup                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:mmi,charger/wakeup                                                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/wakeup                                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys1/wakeup                                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys2/wakeup                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-wpss/wakeup                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,trustedvm@d0800000/subsys0/wakeup                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,wpss@8a00000/subsys4/wakeup                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,wpss@8a00000/wakeup                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_aac/wakeup                                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_alac/wakeup                                                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrnb/wakeup                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_ape/wakeup                                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup                                                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711alaw/wakeup                                                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup                                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                u:object_r:sysfs_wakeup:s0
