@@ -1,3 +1,5 @@
+DEVICE_PATH := device/motorola/dubai
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -125,10 +127,10 @@ PRODUCT_PACKAGES += \
    android.hardware.keymaster@4.1.vendor
 
 # Manifests
-DEVICE_MANIFEST_FILE := device/motorola/dubai/manifest_yupik.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest_yupik.xml
 DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/motorola/dubai/dubai_vendor_framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/dubai_vendor_framework_compatibility_matrix.xml
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \

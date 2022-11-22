@@ -28,7 +28,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Biometrics
-TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/dubai:libudfps_extension.dubai
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.dubai
 
 # Boot
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -108,14 +108,14 @@ ADD_RADIO_FILES := false
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
-TARGET_RECOVERY_FSTAB := device/motorola/dubai/init/fstab.default
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/motorola/dubai/sepolicy/vendor
+    $(DEVICE_PATH)/sepolicy/vendor
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-    device/motorola/dubai/sepolicy/private
+    $(DEVICE_PATH)/sepolicy/private
 
 # UFS
 #namespace definition for librecovery_updater
