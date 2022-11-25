@@ -76,8 +76,6 @@ vendor/etc/acdbdata/adsp_avs_config.acdb|7ca223ebb21cad23acb5935c28dee3679b8d9de
 vendor/firmware/aw_skt.bin|bccd61ed0fd34376bd316b99d8e84b8e05c4789b
 
 # Audio - Stock
-system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
--system_ext/framework/audiosphere.jar|98d17293550d99e59d1edd8582ed4551dc167249
 vendor/bin/audioflacapp|a751f47a3f06bb0638ccd67362259c1adf5221c8
 vendor/lib/soundfx/libasphere.so|a742e8196f321571132113e0052b9c947cb9d37a
 vendor/lib/soundfx/libaudiopreprocessing.so|6d26f7257ae2d1542db733adb0850822bffdb37e
