@@ -72,6 +72,21 @@ vendor/etc/acdbdata/Headset_cal.acdb|ef269d4108f5de4d5820628cb46386081c1252f5
 vendor/etc/acdbdata/Speaker_cal.acdb|2c31133382b2ec6658262aefbb0fc06522d55398
 vendor/etc/acdbdata/adsp_avs_config.acdb|7ca223ebb21cad23acb5935c28dee3679b8d9dea
 
+# Audio (configs) - Stock
+etc/audio_effects.conf|7459ea98ccf41e8d3897179806342fdaa419debb
+vendor/etc/audio/sku_yupik/audio_io_policy.conf|384ee9af2c40711e9b72936eb71d3425ef89c260
+vendor/etc/audio/sku_yupik/audio_platform_info.xml|997e2e484bed2d3edd54adbee1ecd1b405f59470
+vendor/etc/audio/sku_yupik/mixer_paths.xml|69d7903624572be1b5f32f2ffa5b55aca4cdd0b1
+vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths.xml|6491d93224b3dce5cc08583d17b505fe31eb0629
+vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml|0f93cb43693083e4634f0a1db7156e58e2be2b20
+vendor/etc/a2dp_audio_policy_configuration.xml|0175e5dc38c0b95f2e44a62069e3a5656b6eb97c
+vendor/etc/audio_effects.xml|7c5b29f166f23a190abadcb732b930ab3d66039e
+vendor/etc/audio_policy_configuration.xml|84648886f073c2f92feb13931067c3537cc9530a
+vendor/etc/audio_policy_volumes.xml|6fffbaf68855a318373c437fb09de9a205a59118
+vendor/etc/default_volume_tables.xml|8f92aea94044a17bda2c5f7b7b826af4c70550af
+vendor/etc/r_submix_audio_policy_configuration.xml|8140e8e1cfb8a51ce655bfa7b166845b594a9e6f
+vendor/etc/usb_audio_policy_configuration.xml|ff1a862db0102d8c6cae81e8de0060243df29bcd
+
 # Audio (firmware) - Stock
 vendor/firmware/aw_skt.bin|bccd61ed0fd34376bd316b99d8e84b8e05c4789b
 
