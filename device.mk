@@ -32,7 +32,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Architecture
 TARGET_BOARD_PLATFORM := lahaina
-TARGET_BOOTLOADER_BOARD_NAME := lahaina
+TARGET_BOOTLOADER_BOARD_NAME := dubai
 
 # Authsecret
 PRODUCT_PACKAGES += \
@@ -156,6 +156,9 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/etc/fstab.default:$(TARGET_COPY_OUT_VEN
 
 # Partitions - FRP
 BOARD_FRP_PARTITION_NAME := frp
+
+# Partitions - Super
+PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Perf
 PRODUCT_COPY_FILES += \
