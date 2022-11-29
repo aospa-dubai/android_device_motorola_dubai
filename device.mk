@@ -141,6 +141,10 @@ DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/dubai_vendor_framework_compatibility_matrix.xml
 
+# Moto Actions
+PRODUCT_PACKAGES += \
+    MotoActions
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
