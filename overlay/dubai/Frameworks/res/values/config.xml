@@ -301,4 +301,11 @@
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
     <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_tap</string>
+
+    <!-- The OEM specified sensor type for the gesture to launch the camera app. -->
+    <integer name="config_cameraLaunchGestureSensorType">65540</integer>
+
+    <!-- The OEM specified sensor string type for the gesture to launch camera app, this value
+         must match the value of config_cameraLaunchGestureSensorType in OEM's HAL -->
+    <string translatable="false" name="config_cameraLaunchGestureSensorStringType">com.motorola.sensor.camera_activate</string>
 </resources>
