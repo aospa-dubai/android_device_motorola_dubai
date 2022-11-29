@@ -117,6 +117,7 @@ ro.config.vc_call_vol_steps=8
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
+bluetooth.device.default_name=motorola edge 30
 bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=28
@@ -153,6 +154,7 @@ vendor.qcom.bluetooth.soc=moselle
 
 # Camera
 camera.disable_zsl_mode=1
+persist.vendor.camera.physical.num=4
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
@@ -245,8 +247,12 @@ debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Motorola
+ro.mot.build.customerid=global
+
 # NFC
 ro.nfc.port=I2C
+ro.vendor.hw.nfc=st
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so

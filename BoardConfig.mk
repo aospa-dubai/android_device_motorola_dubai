@@ -16,7 +16,7 @@
 
 BOARD_VENDOR := motorola
 
-COMMON_PATH := device/motorola/sm7325-common
+DEVICE_PATH := device/motorola/dubai
 
 # Architecture
 TARGET_ARCH := arm64
@@ -34,6 +34,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := dubai
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -53,13 +54,20 @@ BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=8
 BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=dubai
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
 TARGET_KERNEL_SOURCE := kernel/motorola/sm7325
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/lineage_moto-lahaina.config
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/lineage_moto-lahaina.config vendor/lineage_dubai.config
+
+# Kernel Modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
@@ -119,21 +127,21 @@ TARGET_USES_ION := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/device_framework_matrix.xml \
+    $(DEVICE_PATH)/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := yupik
-DEVICE_MANIFEST_YUPIK_FILES += $(COMMON_PATH)/manifest_yupik.xml
-#DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_YUPIK_FILES += $(DEVICE_PATH)/manifest_yupik.xml
+#DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -143,12 +151,18 @@ ifeq ($(TARGET_IS_VAB),true)
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 endif
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_MOT_DP_GROUP_SIZE := 8921284608 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_SUPER_PARTITION_SIZE := 8925478912
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 116340535296
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 3318226944
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 873680896
 BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 916299776
 endif
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
@@ -165,10 +179,10 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 ifeq ($(TARGET_IS_VAB),true)
@@ -182,9 +196,10 @@ TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_RECOVERY_DEVICE_DIRS += $(COMMON_PATH)
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_WIPE := $(COMMON_PATH)/recovery/recovery.wipe
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -192,9 +207,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SELinux
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -221,4 +236,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-include vendor/motorola/sm7325-common/BoardConfigVendor.mk
+include vendor/motorola/dubai/BoardConfigVendor.mk
