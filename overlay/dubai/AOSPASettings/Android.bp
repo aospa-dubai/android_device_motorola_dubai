@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "AOSPASettingsResDubai",
+    sdk_version: "current",
+    device_specific: true,
+}
