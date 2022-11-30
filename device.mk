@@ -65,7 +65,6 @@ PRODUCT_PACKAGES += \
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
-    $(LOCAL_PATH)/configs/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -188,6 +187,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Filesystem
+TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/configs/mot_aids.fs
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
@@ -225,7 +227,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/device_framework_matrix.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := device/qcom/common/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := yupik
 DEVICE_MANIFEST_YUPIK_FILES += $(DEVICE_PATH)/manifest_yupik.xml
 
@@ -335,7 +337,6 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -415,11 +416,7 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
+    libjson
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
@@ -452,18 +449,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 
@@ -495,10 +480,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
-# Vendor service manager
-PRODUCT_PACKAGES += \
-    vndservicemanager
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 
@@ -517,7 +498,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libqsap_sdk \
-    libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     vendor.qti.hardware.wifi.hostapd@1.0.vendor \
