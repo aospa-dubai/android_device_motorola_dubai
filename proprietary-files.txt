@@ -67,6 +67,20 @@ vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
+# Audio (Configs)
+etc/audio_effects.conf:vendor/etc/audio_effects.conf
+vendor/etc/audio/sku_yupik/audio_io_policy.conf
+vendor/etc/audio/sku_yupik/audio_platform_info.xml
+vendor/etc/audio/sku_yupik/mixer_paths.xml
+vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths.xml
+vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/audio_effects.xml
+vendor/etc/audio_ext_spkr.conf
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/default_volume_tables.xml
+
 # Audio (Firmware)
 vendor/firmware/aw882xx_pid_1852_acf.bin
 vendor/firmware/aw882xx_pid_2113_acf.bin
