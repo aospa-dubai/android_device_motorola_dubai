@@ -80,6 +80,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := dubai
+
 # Ant
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
@@ -400,6 +403,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
@@ -489,6 +495,9 @@ PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# Verified Boot
+BOARD_AVB_ENABLE := true
 
 # Vibrator
 PRODUCT_PACKAGES += \
