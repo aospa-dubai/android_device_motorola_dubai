@@ -31,4 +31,10 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareWakeKeys">64</integer>
+
+    <!-- HBM type of UDFPS overlay.
+            0 - GLOBAL HBM
+            1 - LOCAL HBM
+    -->
+    <integer name="config_udfpsHbmType">0</integer>
 </resources>
