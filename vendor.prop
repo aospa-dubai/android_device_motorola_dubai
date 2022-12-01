@@ -1,5 +1,4 @@
 # Audio
-persist.vendor.audio.bcl.enabled=false
 persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
 persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
 persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
@@ -8,10 +7,7 @@ persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
 persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
 persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
 persist.vendor.audio.dualmic.config=endfire
-persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.speaker.stereo=false
-persist.vendor.audio.vbat.enabled=false
-persist.vendor.audio.voicecall.speaker.stereo=false
 persist.vendor.audio_fx.current=waves
 persist.vendor.audio_fx.waves.maxxsense=true
 persist.vendor.audio_fx.waves.proc_twks=true
@@ -23,16 +19,10 @@ ro.vendor.audio.sdk.fluence.nn.enabled=true
 vendor.audio.screen_record=true
 vendor.audio.snd_card.open.retries=50
 vendor.audio.usb.disable.sidetone=true
-vendor.audio.use.sw.alac.decoder=false
-vendor.audio.use.sw.ape.decoder=false
 
 # Audio feature
-vendor.audio.feature.concurrent_capture.enable=false
 vendor.audio.feature.deepbuffer_as_primary.enable=false
-vendor.audio.feature.dynamic_ecns.enable=false
-vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.src_trkn.enable=true
-vendor.audio.feature.vbat.enable=false
 
 # Audio steps
 ro.config.vc_call_vol_steps=8
@@ -87,7 +77,6 @@ dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.5
 
 # Display
-vendor.display.enable_async_powermode=1
 vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=1
 vendor.display.hwc_disable_hdr=0
@@ -112,9 +101,6 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.sf.disable_elapsetime_if_has_virtual=1
-debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
-persist.sys.sf.color_mode=0
 persist.sys.sf.force_brightness_capability=1
 persist.sys.sf.native_mode=1
 ro.hardware.egl=adreno
