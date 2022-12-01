@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiverResCommon_Sys \
     SettingsProviderResDubai \
     SystemUIResCommon_Sys \
-    SystemUIResDubai \
     TelecommResCommon_Sys \
     TelephonyResCommon_Sys \
     WifiResCommon_Sys \
