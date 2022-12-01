@@ -188,6 +188,10 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Kernel Modules
+KERNEL_MODULES_INSTALL := dlkm
+KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/dubai/$(KERNEL_MODULES_INSTALL)/lib/modules
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/goodix_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_ts.kl
