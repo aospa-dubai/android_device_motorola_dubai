@@ -305,7 +305,8 @@ TARGET_BOARD_PLATFORM := lahaina
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
+    android.hardware.power.stats@1.0-service.mock
 
 # QMI
 PRODUCT_PACKAGES += \
