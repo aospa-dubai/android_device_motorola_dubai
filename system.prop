@@ -34,9 +34,6 @@ ro.opa.eligible_device=true
 debug.hwui.skia_atrace_enabled=false
 
 # IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
 ro.qcom.ims.use_moto_vt_ext=true
 
 # Media
@@ -45,10 +42,6 @@ ro.media.recorder-max-base-layer-fps=60
 
 # Netmgrd
 persist.vendor.data.mode=concurrent
-ro.vendor.use_data_netmgrd=true
-
-# Radio
-ro.telephony.default_network=33,33
 
 # RTT
 config.disable_rtt=true
