@@ -12,24 +12,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-PRODUCT_PACKAGES += \
-    AOSPASettingsResDubai \
-    AOSPASystemUIDubai \
-    FrameworksResCommon_Sys \
-    FrameworksResDubai \
-    CarrierConfigResCommon_Sys \
-    CellBroadcastReceiverResCommon_Sys \
-    SettingsProviderResDubai \
-    SystemUIResCommon_Sys \
-    TelecommResCommon_Sys \
-    TelephonyResCommon_Sys \
-    WifiResCommon_Sys \
-    FrameworksResTarget \
-    WifiResTarget
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
@@ -252,6 +234,14 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw
 
+# Overlays
+PRODUCT_PACKAGES += \
+    MotFrameworksResTarget \
+    MotSettingsResTarget \
+    MotSettingsProviderResTarget \
+    MotSystemUIResTarget \
+    MotWifiResTarget
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
@@ -319,6 +309,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     bt \
     display \
     gps \
+    overlay \
     perf
 
 # RenderScript
