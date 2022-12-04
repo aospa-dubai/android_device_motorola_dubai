@@ -55,9 +55,5 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
-# WFD
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
-
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
