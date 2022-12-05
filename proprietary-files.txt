@@ -758,7 +758,6 @@ vendor/bin/ATFWD-daemon|ce70ff0a301c43f6546e937b51fa58261c061848
 vendor/bin/adpl|a0bbc7d27634de01207480764399da836ea5fa24
 vendor/bin/embmsslServer|391f8c002f519f89a3cbea4e7baf86adc1df945c
 vendor/bin/ipacm-diag|69c9e7386df013317b8babc2602b9f00efab4d03
-vendor/bin/netmgrd|0f72978ee27049e3b1b7e53e47bdfdf72013ca1b
 vendor/bin/port-bridge|f35201b7967af929176f6b4f72bbfe3b8a91e8e7
 vendor/bin/qti|524ad5bf149bd90617c7ed5933682685669a38f0
 vendor/bin/shsusrd|4cf1b4017c481cb6b7e0a44f6fb20fe5e94bd47c
@@ -788,6 +787,9 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so|33bb0c7e24b04e368a7bd8ae955b8f14
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so|0f0755727e1c643ea4acfaa5a48af8c719faefc6
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so|4bc34a586b1e408b3343e4301014f08a97d0e82a
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|068425f06983f818fca992fe35e586ba0054ba08
+
+# Data - from LA.UM.9.14.r1-19300.01-LAHAINA.QSSI12.0
+vendor/bin/netmgrd|4254e808131fa3a13aec1474bb769dbd539379ff
 
 # Diag
 vendor/bin/diag-router
