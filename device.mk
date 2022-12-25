@@ -164,6 +164,9 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_
 # Partitions - FRP
 BOARD_FRP_PARTITION_NAME := frp
 
+# Partitions - Super
+PRODUCT_BUILD_SUPER_PARTITION := false
+
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
