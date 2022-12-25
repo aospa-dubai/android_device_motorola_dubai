@@ -231,8 +231,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
-    libOmxCore \
-    libstagefrighthw
+    libOmxCore
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true

@@ -1083,6 +1083,22 @@ vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
 
+# Media (Configs)
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_c2.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_codecs_performance_yupik_v0.xml
+vendor/etc/media_codecs_performance_yupik_v1.xml
+vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_codecs_yupik_v0.xml
+vendor/etc/media_codecs_yupik_v1.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_vendor.xml
+vendor/etc/media_profiles_yupik_v0.xml
+vendor/etc/media_profiles_yupik_v1.xml
+
 # NFC (Configs)
 vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci-st.conf

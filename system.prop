@@ -36,10 +36,6 @@ debug.hwui.skia_atrace_enabled=false
 # IMS
 ro.qcom.ims.use_moto_vt_ext=true
 
-# Media
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-ro.media.recorder-max-base-layer-fps=60
-
 # Netmgrd
 persist.vendor.data.mode=concurrent
 

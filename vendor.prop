@@ -125,7 +125,6 @@ ro.incremental.enable=true
 
 # Media
 debug.stagefright.ccodec=4
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Motorola
 ro.mot.build.customerid=global
