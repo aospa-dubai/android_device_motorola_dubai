@@ -19,4 +19,8 @@
     <!-- Location on the screen of the center of the physical volume up/down buttons. -->
     <dimen name="physical_volume_up_button_center_screen_location_y">600.0px</dimen>
     <dimen name="physical_volume_down_button_center_screen_location_y">760.0px</dimen>
+
+    <!-- The radius of the enrollment progress bar, in dp -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
+
 </resources>
