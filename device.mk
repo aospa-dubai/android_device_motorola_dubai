@@ -75,7 +75,8 @@ BOARD_AVB_ENABLE := true
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.dubai
+    android.hardware.biometrics.fingerprint@2.3-service.dubai \
+    android.hardware.biometrics.fingerprint@2.3.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
