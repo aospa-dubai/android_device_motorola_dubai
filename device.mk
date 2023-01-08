@@ -1,3 +1,4 @@
+BOARD_VENDOR := motorola
 DEVICE_PATH := device/motorola/dubai
 
 # A/B
